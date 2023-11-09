@@ -54,12 +54,12 @@ namespace TestConnectDB
 				//	db.SaveChanges();
 				//}
 
-				//Sotrudnik s1 = db.Sotrudnik.SingleOrDefault(s => s.Id == 3);
-				//if (s1 != null)
-				//{
-				//	s1.Fio = "Lavrov";
-				//	db.SaveChanges();
-				//}
+				Sotrudnik s1 = db.Sotrudnik.SingleOrDefault(s => s.Id == 3);
+				if (s1 != null)
+				{
+					s1.Fio = "Lavrov";
+					db.SaveChanges();
+				}
 
 				// выводим данные после обновления
 				//var sall = db.Sotrudnik.Where(p => p.Fio == "Lavrov");
