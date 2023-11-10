@@ -15,6 +15,8 @@ namespace TestConnectDB
 		[Key]
 		public int Id { get; set; }
 		public string Fio { get; set; }
+		public string FioBeforeMarry { get; set; }
+		public bool Marry { get; set; }
 		public DateTime Dater { get; set; }
 		public bool Pol { get; set; }
 
