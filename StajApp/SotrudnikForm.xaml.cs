@@ -1,5 +1,4 @@
-﻿using Microsoft.SqlServer.Server;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,25 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace StajApp
 {
 	/// <summary>
-	/// Interaction logic for MainWindow.xaml
+	/// Interaction logic for SotrudnikForm.xaml
 	/// </summary>
-	public partial class MainWindow : Window
+	public partial class SotrudnikForm : Window
 	{
-		public MainWindow()
+		public SotrudnikForm()
 		{
 			InitializeComponent();
 		}
-
-		private void Button_Click(object sender, RoutedEventArgs e)
-		{
-			SotrudnikForm sotrudnikForm = new SotrudnikForm();
-			sotrudnikForm.Show();
-		}
-    }
+	}
 }
