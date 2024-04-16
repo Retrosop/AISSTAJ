@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="SotrudnikForm" Height="450" Width="800">
     <Grid>
-        
+        <Button Content="Добавить" HorizontalAlignment="Left" Height="48" Margin="639,376,0,0" VerticalAlignment="Top" Width="141"/>
+
     </Grid>
 </Window>
