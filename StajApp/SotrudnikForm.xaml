@@ -7,7 +7,15 @@
         mc:Ignorable="d"
         Title="SotrudnikForm" Height="450" Width="800">
     <Grid>
-        <Button Content="Добавить" HorizontalAlignment="Left" Height="48" Margin="639,376,0,0" VerticalAlignment="Top" Width="141"/>
+        <Button Content="Добавить запись" HorizontalAlignment="Left" Height="48" Margin="32,367,0,0" VerticalAlignment="Top" Width="219"/>
+        <TextBox HorizontalAlignment="Left" Margin="73,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="272" Height="27"/>
+        <Button Content="Удалить запись" HorizontalAlignment="Center" Margin="0,367,0,0" VerticalAlignment="Top" Height="48" Width="244"/>
+        <Button Content="Редактировать запись" HorizontalAlignment="Left" Margin="555,367,0,0" VerticalAlignment="Top" Height="48" Width="217"/>
+        <TextBox HorizontalAlignment="Left" Margin="500,11,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="272" Height="26"/>
+        <TextBox HorizontalAlignment="Left" Margin="73,46,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="272"/>
+        <Label Content="ФИО" HorizontalAlignment="Left" Margin="21,11,0,0" VerticalAlignment="Top"/>
+        <Label Content="ФИО(перед заменой)" HorizontalAlignment="Left" Margin="363,11,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="21,42,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

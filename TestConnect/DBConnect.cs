@@ -70,17 +70,6 @@ namespace TestConnectDB
 				}
                 Console.WriteLine("HW");
             }
-
-
-
-
-
-
-			//using (var connection = new SqliteConnection("Data Source=usersdata.db"))
-			//{
-			//	connection.Open();
-			//}
-			//Console.Read();
 		}
 	}
 }

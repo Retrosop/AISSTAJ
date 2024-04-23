@@ -55,9 +55,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DocType.cs" />
+    <Compile Include="DocumentForm.xaml.cs">
+      <DependentUpon>DocumentForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SotrudnikForm.xaml.cs">
       <DependentUpon>SotrudnikForm.xaml</DependentUpon>
     </Compile>
+    <Page Include="DocumentForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

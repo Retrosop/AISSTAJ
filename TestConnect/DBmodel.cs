@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TestConnectDB;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Data.Sqlite;
+﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
+using EntityFrameworkCore.Jet;
 
 namespace TestConnectDB
 {
@@ -57,16 +51,9 @@ namespace TestConnectDB
 		public DbSet<Report> Report { get; set; }
 		public DbSet<Comment> Comment { get; set; }
 
-
-		public DataContext() => Database.EnsureCreated();
-
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			//Connected MariyDB 10.6
-			//optionsBuilder.UseMySql("server=localhost;user=root;password=root;database=testdb;", new MySqlServerVersion(new Version(10, 6, 0)));
-			//Connected MSSQL Server
-			optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB; Database=StajDB; Trusted_Connection=True");
-			//optionsBuilder.UseSqlite("Data Source=D:\\staj.db1");
+			optionsBuilder.UseJet(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\StajDatabase.mdb;");
 		}
 	}
 
