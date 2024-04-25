@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestConnectDB", "TestConnec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StajApp", "..\StajApp\StajApp.csproj", "{388C2746-B55D-4D4C-97B2-23EB61483CEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StajAppNet", "..\StajAppNet\StajAppNet.csproj", "{7AFBDC98-B9C6-4701-BB65-055DFEC19871}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{388C2746-B55D-4D4C-97B2-23EB61483CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{388C2746-B55D-4D4C-97B2-23EB61483CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{388C2746-B55D-4D4C-97B2-23EB61483CEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AFBDC98-B9C6-4701-BB65-055DFEC19871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AFBDC98-B9C6-4701-BB65-055DFEC19871}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AFBDC98-B9C6-4701-BB65-055DFEC19871}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AFBDC98-B9C6-4701-BB65-055DFEC19871}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

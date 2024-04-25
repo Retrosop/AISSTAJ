@@ -1,7 +1,7 @@
 ﻿using System;
-using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
+
 
 namespace TestConnectDB
 {
@@ -24,14 +24,14 @@ namespace TestConnectDB
 			// Добавление
 			using (DataContext db = new DataContext())
 			{
-				act.Add(db, "Semenov", DateTime.Now, 34, true);
-				Sotrudnik sotrudnik1 = new Sotrudnik();
-				sotrudnik1.Fio = "Sidorov";
-				sotrudnik1.Age = 38;
-				sotrudnik1.Dater = DateTime.Now;
-				sotrudnik1.Pol = true;
-				db.Sotrudnik.Add(sotrudnik1);
-				db.SaveChanges();
+				//act.Add(db, "Semenov1", DateTime.Now, 34, true);
+				//Sotrudnik sotrudnik1 = new Sotrudnik();
+				//sotrudnik1.Fio = "Sidorov5";
+				//sotrudnik1.Age = 38;
+				//sotrudnik1.Dater = DateTime.Now;
+				//sotrudnik1.Pol = true;
+				//db.Sotrudnik.Add(sotrudnik1);
+				//db.SaveChanges();
 
 
 
@@ -46,29 +46,30 @@ namespace TestConnectDB
 				//db.Add(sotrudnik3); 
 				//db.SaveChanges();
 
-				//Sotrudnik s1 = db.Sotrudnik.SingleOrDefault(s => s.Id == 1);
-				//if (s1 != null)
-				//{
-				//	//удаляем объект
-				//	db.Sotrudnik.Remove(s1);
-				//	db.SaveChanges();
-				//}
-
-				Sotrudnik s1 = db.Sotrudnik.SingleOrDefault(s => s.Id == 3);
+				//Удаление сотрудника по коду PK, например 9
+				Sotrudnik s1 = db.Sotrudnik.SingleOrDefault(s => s.Id == 9);
 				if (s1 != null)
 				{
-					s1.Fio = "Lavrov";
+					//удаляем объект
+					db.Sotrudnik.Remove(s1);
+					db.SaveChanges();
+				}
+
+				Sotrudnik s2 = db.Sotrudnik.SingleOrDefault(s => s.Id == 3);
+				if (s2 != null)
+				{
+					s2.Fio = "LavrovUpdate";
 					db.SaveChanges();
 				}
 
 				// выводим данные после обновления
 				//var sall = db.Sotrudnik.Where(p => p.Fio == "Lavrov");
-				var sall = db.Sotrudnik.Where(p => EF.Functions.Like(p.Fio.ToLower(), "%id%"));
-				foreach (var s in sall)
-				{
-					Console.WriteLine($"{s.Id}.{s.Fio} - {s.Age}");
-				}
-                Console.WriteLine("HW");
+				//var sall = db.Sotrudnik.Where(p => EF.Functions.Like(p.Fio.ToLower(), "%id%"));
+				//foreach (var s in sall)
+				//{
+				//	Console.WriteLine($"{s.Id}.{s.Fio} - {s.Age}");
+				//}
+				Console.WriteLine("HW");
             }
 		}
 	}
