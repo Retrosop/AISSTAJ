@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.ComponentModel.DataAnnotations;
-using EntityFrameworkCore.Jet;
+﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
+
+
 
 namespace TestConnectDB
 {
@@ -14,6 +15,16 @@ namespace TestConnectDB
 		public DateTime Dater { get; set; }
 		public bool? Pol { get; set; }
 		public int Age { get; set; }
+	}
+
+	public class StajLite
+	{
+		[Key]
+		public int Id { get; set; }
+		public Sotrudnik SotrudnikIdLite { get; set; }
+		public DateTime BeginWorkSotrudnik { get; set; }
+		public DateTime EndWorkSotrudnik { get; set; }
+		public DateTime GosWorkSotrudnik { get; set; }
 	}
 	public class Staj
 	{
@@ -32,7 +43,7 @@ namespace TestConnectDB
 		public Staj StajId { get; set; }
 		public string Nomerreport { get; set; }
 		
-		//public DateTime CreateReport { get; set; }
+		public DateTime CreateReport { get; set; }
 	}
 	public class Comment
 	{
@@ -42,17 +53,30 @@ namespace TestConnectDB
 		public string CommentsWork { get; set; }
 	}
 
+	public class SotrudnikLite
+	{
+		[Key]
+		public int Id { get; set; }
+		public string? Fio { get; set; }
+		public string? FioBeforeMarry { get; set; }
+		public bool? Marry { get; set; }
+		public DateTime Dater { get; set; }
+		public bool? Pol { get; set; }
+		public int Age { get; set; }
+	}
+
 
 	public class DataContext : DbContext
 	{
-		public DbSet<Sotrudnik> Sotrudnik { get; set; }
-		public DbSet<Staj> Staj { get; set; }
-		public DbSet<Report> Report { get; set; }
-		public DbSet<Comment> Comment { get; set; }
+		public DbSet<SotrudnikLite> SotrudnikLite { get; set; }
+		//public DbSet<Sotrudnik> Sotrudnik { get; set; }
+		public DbSet<StajLite> StajLite { get; set; }
+		//public DbSet<Report> Report { get; set; }
+		//public DbSet<Comment> Comment { get; set; }
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseJet(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\StajDatabase.mdb;");
+			optionsBuilder.UseSqlite("Data Source=sqlite.db");
 		}
 	}
 

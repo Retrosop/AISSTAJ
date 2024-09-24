@@ -9,9 +9,9 @@ namespace TestConnectDB
 	{
 		public void Add(DataContext db, string fio, DateTime dateroj, int age, bool pol)
 				{
-					Sotrudnik sotr = new Sotrudnik() { Fio = fio, Age = age, Dater = dateroj, Pol = pol};
-					db.Sotrudnik.Add(sotr);
-					db.SaveChanges();
+					//Sotrudnik sotr = new Sotrudnik() { Fio = fio, Age = age, Dater = dateroj, Pol = pol};
+					//db.Sotrudnik.Add(sotr);
+					//db.SaveChanges();
 				}
 	}
 	class Program
@@ -47,20 +47,20 @@ namespace TestConnectDB
 				//db.SaveChanges();
 
 				//Удаление сотрудника по коду PK, например 9
-				Sotrudnik s1 = db.Sotrudnik.SingleOrDefault(s => s.Id == 9);
-				if (s1 != null)
-				{
-					//удаляем объект
-					db.Sotrudnik.Remove(s1);
-					db.SaveChanges();
-				}
+				//Sotrudnik s1 = db.Sotrudnik.SingleOrDefault(s => s.Id == 9);
+				//if (s1 != null)
+				//{
+				//	//удаляем объект
+				//	db.Sotrudnik.Remove(s1);
+				//	db.SaveChanges();
+				//}
 
-				Sotrudnik s2 = db.Sotrudnik.SingleOrDefault(s => s.Id == 3);
-				if (s2 != null)
-				{
-					s2.Fio = "LavrovUpdate";
-					db.SaveChanges();
-				}
+				//Sotrudnik s2 = db.Sotrudnik.SingleOrDefault(s => s.Id == 3);
+				//if (s2 != null)
+				//{
+				//	s2.Fio = "LavrovUpdate";
+				//	db.SaveChanges();
+				//}
 
 				// выводим данные после обновления
 				//var sall = db.Sotrudnik.Where(p => p.Fio == "Lavrov");
