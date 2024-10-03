@@ -7,11 +7,16 @@
         mc:Ignorable="d"
         Title="Сотрудники организации" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="371*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="11*"/>
+        </Grid.ColumnDefinitions>
         <Button x:Name="AddSotrudnikForm" Content="Добавить запись" HorizontalAlignment="Left" Height="28" Margin="19,387,0,0" VerticalAlignment="Top" Width="142" Click="Button_Click"/>
         <TextBox x:Name="InputFio" HorizontalAlignment="Left" Margin="73,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" Height="21"/>
         <Button Content="Удалить запись" HorizontalAlignment="Left" Margin="445,387,0,0" VerticalAlignment="Top" Height="29" Width="150" RenderTransformOrigin="0.999,0.46" Click="Button_Click_1"/>
-        <Button Content="Редактировать запись" HorizontalAlignment="Left" Margin="618,387,0,0" VerticalAlignment="Top" Height="29" Width="160"/>
-        <TextBox x:Name="InputFioBeforeMarry" HorizontalAlignment="Left" Margin="500,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Height="20"/>
+        <Button Content="Редактировать запись" HorizontalAlignment="Left" Margin="618,387,0,0" VerticalAlignment="Top" Height="29" Width="160" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="InputFioBeforeMarry" HorizontalAlignment="Left" Margin="500,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Height="20" Grid.ColumnSpan="3"/>
         <Label Content="ФИО" HorizontalAlignment="Left" Margin="21,11,0,0" VerticalAlignment="Top"/>
         <Label Content="ФИО(перед заменой)" HorizontalAlignment="Left" Margin="363,11,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="InputMarry" Content="Замужем" HorizontalAlignment="Left" Margin="32,53,0,0" VerticalAlignment="Top"/>
@@ -19,8 +24,8 @@
         <Label Content="Дата рождения" HorizontalAlignment="Left" Margin="305,49,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="InputPol" Content="Пол" HorizontalAlignment="Left" Margin="127,53,0,0" VerticalAlignment="Top"/>
         <Label Content="Возраст" HorizontalAlignment="Left" Margin="580,49,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="InputAge" HorizontalAlignment="Left" Margin="658,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ListView x:Name="sotrudnikList" Margin="21,83,20,74" MouseLeftButtonUp="MouseClick" d:ItemsSource="{d:SampleData ItemCount=5}">
+        <TextBox x:Name="InputAge" HorizontalAlignment="Left" Margin="658,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <ListView x:Name="sotrudnikList" Margin="21,83,20,74" MouseLeftButtonUp="MouseClick" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="3">
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding Fio}" Width="160" Header="ФИО"/>

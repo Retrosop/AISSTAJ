@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="заметка.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -17,6 +21,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TestConnect\TestConnectDB.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="заметка.jpg" />
   </ItemGroup>
 
 </Project>

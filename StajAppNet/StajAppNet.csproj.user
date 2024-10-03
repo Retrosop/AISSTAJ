@@ -7,15 +7,33 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="MainStaj.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="NewSotrydnik.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="SotrudnikForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Заметка.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="MainStaj.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="NewSotrydnik.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="SotrudnikForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Заметка.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
