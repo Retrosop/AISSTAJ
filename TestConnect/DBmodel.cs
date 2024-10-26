@@ -79,6 +79,7 @@ namespace TestConnectDB
 		public DateTime Dater { get; set; }
 		public bool? Pol { get; set; }
 		public int Age { get; set; }
+		public bool? Status { get; set; }
 	}
 
 

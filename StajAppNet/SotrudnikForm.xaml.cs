@@ -49,6 +49,7 @@ namespace StajAppNet
 					InputPol.IsChecked = t.Pol;
 					InputMarry.IsChecked = t.Marry;
 					InputDater.Text = t.Dater.ToString("dd.MM.yyyy");
+					InputPol.IsChecked = t.Status;
 				}
 			}
 		}
@@ -65,6 +66,7 @@ namespace StajAppNet
 				sotrudnik.Pol = InputPol.IsChecked;
 				sotrudnik.Age = int.Parse(InputAge.Text);
 				sotrudnik.Marry = InputMarry.IsChecked;
+				sotrudnik.Status = InputStatus.IsChecked;
 
 				try
 				{
@@ -108,6 +110,7 @@ namespace StajAppNet
 					InputPol.IsChecked = t.Pol;
 					InputMarry.IsChecked = t.Marry;
 					InputDater.Text = t.Dater.ToString("dd.MM.yyyy");
+					InputPol.IsChecked = t.Status;
 				}
 			}
 		}
@@ -166,6 +169,7 @@ namespace StajAppNet
 					t.Pol = InputPol.IsChecked;
 					t.Marry = InputMarry.IsChecked;
 					t.Dater = DateTime.Parse(InputDater.Text);
+					t.Status = InputStatus.IsChecked;
 
 
 					db.SaveChanges();

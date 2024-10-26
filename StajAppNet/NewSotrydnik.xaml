@@ -14,7 +14,7 @@
         <Label Content="Пол" HorizontalAlignment="Left" Margin="30,117,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="Мужской" HorizontalAlignment="Left" Margin="154,123,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="Женский" HorizontalAlignment="Left" Margin="255,123,0,0" VerticalAlignment="Top"/>
-        <ListView x:Name="sotrudnikList_Копировать" Margin="30,182,0,99" MouseLeftButtonUp="MouseClick" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="sotrudnikList_SelectionChanged" HorizontalAlignment="Left" Width="310">
+        <ListView x:Name="sotrudnikList_Копировать" Margin="30,182,0,99" HorizontalAlignment="Left" Width="310">
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding Fio}" Width="80" Header="Организация"/>

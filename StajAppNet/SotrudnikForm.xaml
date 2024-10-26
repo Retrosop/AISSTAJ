@@ -19,25 +19,28 @@
         <TextBox x:Name="InputFioBeforeMarry" HorizontalAlignment="Left" Margin="500,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Height="20" Grid.ColumnSpan="3"/>
         <Label Content="ФИО" HorizontalAlignment="Left" Margin="21,11,0,0" VerticalAlignment="Top"/>
         <Label Content="ФИО(перед заменой)" HorizontalAlignment="Left" Margin="363,11,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="InputMarry" Content="Замужем" HorizontalAlignment="Left" Margin="32,53,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="InputMarry" Content="Замужем" HorizontalAlignment="Left" Margin="21,53,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="InputDater" HorizontalAlignment="Left" Margin="460,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Text="ДД.ММ.ДДДД"/>
-        <Label Content="Дата рождения" HorizontalAlignment="Left" Margin="305,49,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="InputPol" Content="Пол" HorizontalAlignment="Left" Margin="127,53,0,0" VerticalAlignment="Top"/>
+        <Label Content="Дата рождения" HorizontalAlignment="Left" Margin="353,47,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="InputPol" Content="Пол" HorizontalAlignment="Left" Margin="96,54,0,0" VerticalAlignment="Top"/>
         <Label Content="Возраст" HorizontalAlignment="Left" Margin="580,49,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="InputAge" HorizontalAlignment="Left" Margin="658,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
         <ListView x:Name="sotrudnikList" Margin="21,83,20,74" MouseLeftButtonUp="MouseClick" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="3">
             <ListView.View>
                 <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Status}" Width="190" Header="Работа"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Fio}" Width="160" Header="ФИО"/>
                     <GridViewColumn DisplayMemberBinding="{Binding FioBeforeMarry}" Width="160" Header="ФИО(замена)"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Marry}" Width="50" Header="Женат"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Dater}" Width="90" Header="Дата рождения"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Pol}" Width="190" Header="Пол"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Age}" Width="50" Header="Возраст"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Status}" Width="190" Header=""/>
                 </GridView>
             </ListView.View>
         </ListView>
         <Button Content="Обновить запись" HorizontalAlignment="Left" Margin="172,387,0,0" VerticalAlignment="Top" Height="28" Width="158" Click="Button_Click_2"/>
+        <CheckBox x:Name="InputStatus" Content="Работающий/Не работающий" HorizontalAlignment="Left" Margin="159,53,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.09,0.242"/>
 
     </Grid>
 </Window>

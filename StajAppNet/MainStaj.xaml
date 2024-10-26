@@ -12,13 +12,13 @@
             <ColumnDefinition Width="18*"/>
             <ColumnDefinition Width="11*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Расчёт стажа" HorizontalAlignment="Left" Height="28" Margin="396,342,0,0" VerticalAlignment="Top" Width="93" Click="Button_Click"/>
-        <Button Content="Сохранить" HorizontalAlignment="Left" Margin="620,387,0,0" VerticalAlignment="Top" Height="29" Width="70" RenderTransformOrigin="0.999,0.46" Click="Button_Click_1"/>
+        <Button Content="Расчёт стажа" HorizontalAlignment="Left" Height="28" Margin="396,342,0,0" VerticalAlignment="Top" Width="93" />
+        <Button Content="Сохранить" HorizontalAlignment="Left" Margin="620,387,0,0" VerticalAlignment="Top" Height="29" Width="70" RenderTransformOrigin="0.999,0.46" />
         <Button Content="Выйти" HorizontalAlignment="Left" Margin="698,387,0,0" VerticalAlignment="Top" Height="29" Width="80"/>
         <TextBox HorizontalAlignment="Left" Margin="400,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Height="20"/>
         <Label Content="Общий стаж" HorizontalAlignment="Left" Margin="396,241,0,0" VerticalAlignment="Top" Width="199"/>
         <Label Content="Трудовая книга" HorizontalAlignment="Left" Margin="400,81,0,0" VerticalAlignment="Top" Height="27" Width="89"/>
-        <ListView x:Name="sotrudnikList" Margin="19,32,0,18" MouseLeftButtonUp="MouseClick" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="sotrudnikList_SelectionChanged" HorizontalAlignment="Left" Width="354">
+        <ListView x:Name="sotrudnikList" Margin="19,32,0,18" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="sotrudnikList_SelectionChanged" HorizontalAlignment="Left" Width="354">
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding Fio}" Width="160" Header="ФИО"/>
@@ -32,11 +32,11 @@
         <RadioButton Content="Действующие" HorizontalAlignment="Left" Margin="21,11,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="Уволенные" HorizontalAlignment="Left" Margin="133,12,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="Заметки" HorizontalAlignment="Left" Margin="227,12,0,0" VerticalAlignment="Top"/>
-        <Button Content="Поиск" HorizontalAlignment="Left" Margin="698,12,0,0" VerticalAlignment="Top" Height="18" Width="63" RenderTransformOrigin="0.999,0.46" Click="Button_Click_1"/>
+        <Button Content="Поиск" HorizontalAlignment="Left" Margin="698,12,0,0" VerticalAlignment="Top" Height="18" Width="63" RenderTransformOrigin="0.999,0.46" />
         <TextBox HorizontalAlignment="Left" Margin="698,50,0,0" TextWrapping="Wrap" Text="Возраст" VerticalAlignment="Top" Width="63"/>
         <Image HorizontalAlignment="Left" Height="17" Margin="766,50,0,0" VerticalAlignment="Top" Width="16" Source="/заметка.jpg"/>
         <TextBox HorizontalAlignment="Left" Margin="400,50,0,0" TextWrapping="Wrap" Text="Выбранный сотрудник" VerticalAlignment="Top" Width="281"/>
-        <ListView x:Name="sotrudnikList_Копировать" Margin="396,113,0,250" MouseLeftButtonUp="MouseClick" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="sotrudnikList_SelectionChanged" HorizontalAlignment="Left" Width="386">
+        <ListView x:Name="sotrudnikList_Копировать" Margin="396,113,0,250" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="sotrudnikList_SelectionChanged" HorizontalAlignment="Left" Width="386">
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding Fio}" Width="80" Header="Организация"/>
@@ -47,7 +47,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView x:Name="sotrudnikList_Копировать1" Margin="647,241,0,105" MouseLeftButtonUp="MouseClick" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="sotrudnikList_SelectionChanged" HorizontalAlignment="Left" Width="135">
+        <ListView x:Name="sotrudnikList_Копировать1" Margin="647,241,0,105"  d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="sotrudnikList_SelectionChanged" HorizontalAlignment="Left" Width="135">
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding Fio}" Width="30" Header="Год"/>
@@ -61,7 +61,7 @@
         <Button Content="Редактировать" HorizontalAlignment="Left" Margin="466,198,0,0" VerticalAlignment="Top" Height="28" Width="87" Click="Button_Click_2"/>
         <Button Content="Заметка" HorizontalAlignment="Left" Margin="558,198,0,0" VerticalAlignment="Top" Height="28" Width="69" Click="Button_Click_2"/>
         <Button Content="Документ" HorizontalAlignment="Left" Margin="632,198,0,0" VerticalAlignment="Top" Height="28" Width="69" Click="Button_Click_2"/>
-        <Button x:Name="AddSotrudnikForm_Копировать" Content="Отчёт" HorizontalAlignment="Left" Height="28" Margin="494,342,0,0" VerticalAlignment="Top" Width="93" Click="Button_Click"/>
+        <Button x:Name="AddSotrudnikForm_Копировать" Content="Отчёт" HorizontalAlignment="Left" Height="28" Margin="494,342,0,0" VerticalAlignment="Top" Width="93" />
         <Button Content="Переместить" HorizontalAlignment="Left" Margin="705,198,0,0" VerticalAlignment="Top" Height="28" Width="77" Click="Button_Click_2"/>
     </Grid>
 </Window>
