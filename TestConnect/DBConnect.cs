@@ -7,11 +7,11 @@ namespace TestConnectDB
 {
 	class Operate
 	{
-		public void Add(DataContext db, string fio, DateTime dateroj, int age, bool pol)
+		public void Add(DataContext db, string fio, DateTime dateroj, int age, bool pol, bool status)
 				{
-					SotrudnikLite sotr = new SotrudnikLite() { Fio = fio, Age = age, Dater = dateroj, Pol = pol};
+					SotrudnikLite sotr = new SotrudnikLite() { Fio = fio, Age = age, Dater = dateroj, Pol = pol, Status = status};
 					db.Sotrudnik.Add(sotr);
-					db.SaveChanges();
+					//db.SaveChanges();
 				}
 	}
 	class Program
@@ -24,14 +24,14 @@ namespace TestConnectDB
 			// Добавление
 			using (DataContext db = new DataContext())
 			{
-				act.Add(db, "Semenov1", DateTime.Now, 34, true);
+				act.Add(db, "Semenov1", DateTime.Now, 34, true,true);
 				SotrudnikLite sotrudnik1 = new SotrudnikLite();
 				sotrudnik1.Fio = "Sidorov5";
 			    sotrudnik1.Age = 38;
 				sotrudnik1.Dater = DateTime.Now;
 				sotrudnik1.Pol = true;
 				db.Sotrudnik.Add(sotrudnik1);
-				db.SaveChanges();
+				//db.SaveChanges();
 
 
 
@@ -42,7 +42,7 @@ namespace TestConnectDB
 				db.Sotrudnik.Add(sotrudnik2);
 				db.SaveChanges();
 
-				SotrudnikLite sotrudnik3 = new SotrudnikLite() { Fio = "Petrov", Age = 33, Dater = DateTime.Now, Pol = true};
+				SotrudnikLite sotrudnik3 = new SotrudnikLite() { Fio = "Petrov", Age = 33, Dater = DateTime.Now, Pol = true, Status = false};
 				db.Add(sotrudnik3); 
 				db.SaveChanges();
 
